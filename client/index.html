@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-US" class="js" pwa-launched="true" pwa-extension-id="npnbdojkgkbcdfdjlfdmplppdphlhhcf" pwa-extension-url-root="chrome-extension://npnbdojkgkbcdfdjlfdmplppdphlhhcf/"><head>
+	<meta charset="UTF-8">
+	<title>LM2020FC</title>
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body id="body">
+<div id="mainpage">
+	<div id="header">
+		<div id="headimg">namesLogo</div>
+		<img id="moresymb" src="https://raw.githubusercontent.com/goldprogrammer/genuisgames/master/more_symbol.png">
+		<div id="clickme" onClick="leftPanelDisp()"></div>
+	</div>
+	<div id = "leftPanelWrapper">
+	<div id="leftPanel">
+		<img id="leftPanelX" src="https://raw.githubusercontent.com/goldprogrammer/genuisgames/master/leftPanelX.png" onclick="k=1; leftPanelDisp()">
+	</div>
+	</div>
+	<div id="main_support_box">
+		<p id="name1">Jack Lorence &</p>
+		<p id="name2">Nick Mascilli</p>
+		<p id="for">for</p>
+		<p id="office">StuGov Prez & VP</p>
+		<img src="lm.jpeg" id="survey" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSe9j8_Bc0sOXJQRZnqhVPvDYJk13koZGDUXCrBVpLbNSm_Vmg/viewform')">
+		<p id="insta_txt">Follow us on instagram</p>
+		<img href="#" src="https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=300" id="instalogo" class="fa fa-instagram"></a>
+
+	</div>
+</div>
+<div id="PEC_Panel">
+	<img class="PEC" id="PECTHE" src="https://raw.githubusercontent.com/goldprogrammer/genuisgames/master/PECTHE.png"></img>
+	<img class="PEC" id="PECP" src="https://raw.githubusercontent.com/goldprogrammer/genuisgames/master/PECP.png"></img>
+	<img class="PEC" id="PECE" src="https://raw.githubusercontent.com/goldprogrammer/genuisgames/master/PECE.png"></img>
+	<img class="PEC" id="PECC" src="https://raw.githubusercontent.com/goldprogrammer/genuisgames/master/PECC.png"></img>
+	<img class="PEC" id="PECPLAN" src="https://raw.githubusercontent.com/goldprogrammer/genuisgames/master/PECPLAN.png"></img>
+</div>
+	<style type="text/css">
+		body{
+			margin: 0;
+			background: black;
+			position:static;
+			overflow-x:hidden;
+			top:0;
+		}#mainpage{
+			margin: 0;
+			background: #014989;
+			position:sticky;
+			top:0;
+		}
+		#header{
+			position:fixed;
+			top:0px;
+			left:0px;
+			background: #f2f5f7;
+			text-align:center;
+			font-size:100;
+			z-index: 10;
+		}#headimg{
+			position: fixed;
+			background: #000000;
+		}#leftPanelWrapper{
+			position:relative;
+			z-index: 10000;
+		}
+		#moresymb,#clickme{
+			position:fixed;
+		}#leftPanel,#leftPanelX{
+			position: fixed;
+			background: #ec3025;
+		}#main_support_box{
+			position:absolute;
+			background: #f2f5f7;
+		}#name1, #name2, #for, #office{
+			position: absolute;
+			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+			background: #014989;
+			-webkit-background-clip: text;
+  			-webkit-text-fill-color: transparent	
+		}#for, #office{
+			background:#ec3025;
+			-webkit-background-clip: text;
+  			-webkit-text-fill-color: transparent
+		}#insta_txt{
+			position: absolute;
+			font-family: 'Pacifico', cursive;
+			background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+			-webkit-background-clip: text;
+  			-webkit-text-fill-color: transparent
+			
+		}.fa{
+			position: absolute;
+ 			text-align: center;
+ 			text-decoration: none;
+ 			border-radius:25%;
+		}.fa:hover {
+ 			opacity: 0.7;
+		}.fa-instagram{
+			background: #3B5998;
+  			color: white;
+		}p{
+			color:blue;
+			position:absolute;
+		}#PEC_Panel{
+			position:absolute;
+			background: #ec3025;
+
+		}.PEC{
+			position: absolute;
+			z-index: 1;
+		}img{
+			position: absolute;
+			border-radius: 50px;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		var k = 0;
+		var height;
+		var width;
+		var leftPanelWidth;
+
+		window.onload = function() {
+		
+		width = window.innerWidth;
+		height = window.innerHeight;
+		//confirm(width+", "+height)
+
+		if(height>width){leftPanelWidth = width;
+			console.log("1"+leftPanelWidth)}
+		else if(width>=height){leftPanelWidth = 500;
+			console.log(leftPanelWidth)}
+		//console.log(leftPanelWidth)
+
+			header.style.position = "fixed"
+			header.style.zIndex = "1000"
+			header.style.width = width+"px"
+			header.style.height = height/10+"px"
+
+			headimg.style.height = 2.5*height/10/3+"px"
+			headimg.style.width = 2.5*height/10+"px"
+			headimg.style.left = (width/2-(2.5*height/10/2))+"px"
+			headimg.style.top = ((height/20)-2.5*height/10/6)+"px"
+
+			mainpage.style.height = height+"px"
+			mainpage.style.width = width+"px"
+			mainpage.style.left = 0+"px"
+			mainpage.style.top = 0+"px"
+
+			moresymb.style.height = 2.5*height/10/3+"px"
+			moresymb.style.width = 2.5*height/10/3+"px"
+			moresymb.style.left = (width/60)+"px"
+			moresymb.style.top = ((height/20)-2.5*height/10/6)+"px"
+
+			clickme.style.height = 2.5*height/10/3+"px"
+			clickme.style.width = 2.5*height/10/3+"px"
+			clickme.style.left = (width/60)+"px"
+			clickme.style.top = ((height/20)-2.5*height/10/6)+"px"
+
+			leftPanel.style.height = height+"px"
+			leftPanel.style.width = leftPanelWidth+"px"
+			leftPanel.style.top = "0px"
+			leftPanel.style.left = -leftPanelWidth+"px"
+
+			leftPanelX.style.height = 2.5*height/10/12+"px"
+			leftPanelX.style.width = 2.5*height/10/12+"px"
+			leftPanelX.style.left = leftPanelWidth-2.5*height/10/12-leftPanelWidth+"px"
+			leftPanelX.style.top = 2.5*height/10/12+"px"
+
+			main_support_box.style.height = .65*height+"px"
+			main_support_box.style.width = 6*.05*height+50+"px"
+			main_support_box.style.top = .2*height+"px"
+			main_support_box.style.left = .2*width+"px"
+			main_support_box.style.borderRadius = "50px"
+
+			name1.style.height = .06*height+"px"
+			name1.style.width = 10*.05*height+"px"
+			name1.style.top = .03*height+"px"
+			name1.style.left = (6*.05*height+50)/2-2.5*.05*height+"px"
+			name1.style.fontSize = .035*height+"px"
+
+			name2.style.height = .06*height+"px"
+			name2.style.width = 10*.05*height+"px"
+			name2.style.top = .1*height-.03*height+"px"
+			name2.style.left = (8*.05*height+50)/2-2.5*.0625*height+"px"
+			name2.style.fontSize = .035*height+"px"
+
+			document.getElementById("for").style.height = .06*height+"px"
+			document.getElementById("for").style.width = 10*.05*height+"px"
+			document.getElementById("for").style.top = .16*height-.04*height+"px"
+			document.getElementById("for").style.left = (8*.05*height+50)/2-2.5*.0325*height+"px"
+			document.getElementById("for").style.fontSize = .035*height+"px"
+
+			office.style.height = .06*height+"px"
+			office.style.width = 10*.05*height+"px"
+			office.style.top = .325*.65*height-.05*height+"px"
+			office.style.left = (8*.05*height+50)/2-2.5*.079*height+"px"
+			office.style.fontSize = .035*height+"px"
+
+			survey.style.height = .3*height+"px"
+			survey.style.top = .205*height+"px"
+			survey.style.left = 3*.05*height+36.5-.15*height+"px"
+			survey.style.borderRadius = "0px"
+
+			
+			insta_txt.style.height = .75*.06*height+"px"
+			insta_txt.style.width = 6*.05*height+"px"
+			insta_txt.style.top = .8*height-.24*height-.05*1.2*height+"px"
+			insta_txt.style.left = (6*.05*height+50)/2-2.5*.05*height+"px"
+			insta_txt.style.fontSize = .75*.035*height+"px"
+
+			instalogo.style.height = .05*height+"px"
+			instalogo.style.width = .05*height+"px"
+			instalogo.style.top = .85*height-.24*height-.05*1.3*height+"px"
+			instalogo.style.left = (6*.05*height+50)/2-.025*height+"px"
+
+			PEC_Panel.style.height = (height-height*.1)+"px"
+			PEC_Panel.style.width = width+"px"
+			PEC_Panel.style.top = height+"px"
+			PEC_Panel.style.left = 0+"px"
+
+			document.getElementById("body").style.height = height*2-height/10+"px"
+			document.getElementById("body").style.width = width+"px"
+			document.getElementById("body").style.top = 0+"px"
+			document.getElementById("body").style.left = 0+"px"
+
+			PECTHE.style.height = height*.1+"px";
+			PECTHE.style.width = height*.3+"px";
+			PECTHE.style.top = height*.05+"px"
+
+			PECP.style.height = height*.1+"px";
+			PECP.style.width = height*.1+"px";
+			PECP.style.top = height*.325+"px"
+			//PECP.style.left = -he+"px"
+
+			PECE.style.height = height*.1+"px"
+			PECE.style.width = height*.1+"px"
+			PECE.style.top = height*.325+"px"
+			PECE.style.left = height*.1+"px"
+
+			PECC.style.height = height*.1+"px"
+			PECC.style.width = height*.1+"px"
+			PECC.style.top = height*.325+"px"
+			PECC.style.left = height*.2+"px"
+
+			PECPLAN.style.height = height*.1+"px"
+			PECPLAN.style.width = height*.3+"px"
+			PECPLAN.style.top = height*.75+"px"
+		}
+		function leftPanelDisp() {
+			console.log("hi")
+			if(k/2==Math.floor(k/2)){
+				if((width/2-(2.5*height/10/2))+leftPanelWidth+2.5*height/10<width){
+					$('#moresymb').animate({left: 5+"px"},75);
+					$('#clickme').animate({left: 5+"px"},75);
+					//$('#header').animate({left: "leftPanelWidth+"px""});
+					$('#headimg').animate({left: (width/2-(2.5*height/10/2))+leftPanelWidth+"px"}, "slow");
+					$('#moresymb').animate({left: '+='+leftPanelWidth+'px'});
+					$('#clickme').animate({left: '+='+leftPanelWidth+'px'});
+					//$('#leftPanelX').animate({left: '+='+String(leftPanelWidth-(2.5*height/10/12))+'px'});
+				}$('#leftPanel').animate({left: '+='+leftPanelWidth+'px'}, "slow");
+				$('#leftPanelX').animate({left: leftPanelWidth-(2.5*height/10/6)+'px'}, "slow");
+			}else if((k/2!=Math.floor(k/2) && width/2-(2.5*height/10/2))+leftPanelWidth+2.5*height/10<width){
+				$('#moresymb').animate({left: "5px"});
+				$('#clickme').animate({left: "5px"});
+				//$('#header').animate({left: "0"});
+				$('#headimg').animate({left: (width/2-(2.5*height/10/2))+"px"});
+				$('#moresymb').animate({left: (width/60)+"px"});
+				$('#clickme').animate({left: (width/60)+"px"});
+				$('#leftPanel').animate({left: '-='+leftPanelWidth+'px'});
+				//$('#leftPanelX').animate({left: '+='leftPanelWidth+"px"'});
+				$('#leftPanelX').animate({left: String(-leftPanelWidth-(2.5*height/10/12))+'px'});
+				console.log("2")
+			}else{
+				$('#leftPanelX').animate({left: String(-leftPanelWidth-(2.5*height/10/12))+'px'});
+				$('#leftPanel').animate({left: '-='+leftPanelWidth+'px'});
+			}
+			k++
+		}
+	</script>
+</body>
+</html>
